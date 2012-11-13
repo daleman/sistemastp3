@@ -60,9 +60,12 @@ typedef struct {
 
 extern int cant_ranks, mi_rank, mi_nro, mi_rol, mi_char, cant_servidores;
 
-extern int request_diferido[];
+extern int* request_diferido;
 
-extern int faltantes, mi_numero;
+extern int faltantes;
+extern int mi_numero[];
+extern int buf_numero[];
+
 
 extern void debug(const char* mensaje);
 

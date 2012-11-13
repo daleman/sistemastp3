@@ -214,9 +214,6 @@ int main(int argc, char *argv[])
     mi_rol = mi_rank % 2;
     mi_char = ' ';
 
-    
-    
-
     if(mi_rol == ROL_SERVIDOR) {
     
         if(mi_rank == RANK_CERO) {
@@ -227,7 +224,7 @@ int main(int argc, char *argv[])
         /* Por lo demás los servidores están listos para trabajar. */
         servidor(mi_rank + 1);
 
-    } else { 
+    } else {
         assert(mi_rol == ROL_CLIENTE);
 
         /* Cada cliente espera su mensaje inicial antes de empezar. */
