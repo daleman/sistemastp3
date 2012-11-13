@@ -22,6 +22,10 @@
 #define TAG_LIBERO            40    /* cli -> srv */
 #define TAG_TERMINE           50    /* cli -> srv */
 
+#define TAG_PEDIR             60    /* srv -> srv */
+#define TAG_TE_PERMITO        70    /* srv -> srv */
+
+
 /* Abrevs. de constantes MPI que usaremos seguido */
 
 #define COMM_WORLD      MPI_COMM_WORLD
@@ -56,10 +60,10 @@ typedef struct {
 
 extern int cant_ranks, mi_rank, mi_nro, mi_rol, mi_char, cant_servidores;
 
-extern int request[];
+extern int request_diferido[];
+
+extern int faltantes, mi_numero;
 
 extern void debug(const char* mensaje);
-
-int i;
 
 #endif

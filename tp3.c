@@ -214,14 +214,8 @@ int main(int argc, char *argv[])
     mi_rol = mi_rank % 2;
     mi_char = ' ';
 
-    int cant_servidores = cant_ranks / 2;
-    int request[cant_servidores];
-
-    int i = 0;
-    while(i < cant_servidores){
-	request[i] = 0;
-	i++;
-    }
+    
+    
 
     if(mi_rol == ROL_SERVIDOR) {
     
