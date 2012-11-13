@@ -220,7 +220,6 @@ int main(int argc, char *argv[])
     int i = 0;
     while(i < cant_servidores){
 	request[i] = 0;
-	i++;
     }
 
     if(mi_rol == ROL_SERVIDOR) {
