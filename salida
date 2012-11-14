@@ -6,173 +6,372 @@
 	rk3   c1   b    	¡Buenas! Recibí mensaje inicial con parámetros
 	rk3   c1   b    	     250ms ini     2000ms fin     5 iters      500ms prev      500ms crit
 	rk3   c1   b    	Computando cuestiones iniciales...               
+	rk0   s0        Enviando mensaje inicial con parámetros          
+	rk0   s0        Enviando mensaje inicial con parámetros          
+	rk5   c2   c    	¡Buenas! Recibí mensaje inicial con parámetros
+	rk5   c2   c    	     250ms ini     2000ms fin     5 iters      500ms prev      500ms crit
+	rk5   c2   c    	Computando cuestiones iniciales...               
+	rk7   c3   d    	¡Buenas! Recibí mensaje inicial con parámetros
+	rk0   s0        Enviando mensaje inicial con parámetros          
+	rk7   c3   d    	     250ms ini     2000ms fin     5 iters      500ms prev      500ms crit
+	rk9   c4   e    	¡Buenas! Recibí mensaje inicial con parámetros
+	rk7   c3   d    	Computando cuestiones iniciales...               
+	rk9   c4   e    	     250ms ini     2000ms fin     5 iters      500ms prev      500ms crit
+	rk9   c4   e    	Computando cuestiones iniciales...               
+	rk0   s0        Enviando mensaje inicial con parámetros          
+	rk11  c5   f    	¡Buenas! Recibí mensaje inicial con parámetros
+	rk11  c5   f    	     250ms ini     2000ms fin     5 iters      500ms prev      500ms crit
+	rk11  c5   f    	Computando cuestiones iniciales...               
 	rk1   c0   a    	Computando parte no crítica...                  
 	rk3   c1   b    	Computando parte no crítica...                  
-	rk3   c1   b    	¡Necesito mutex!                                
+	rk5   c2   c    	Computando parte no crítica...                  
+	rk7   c3   d    	Computando parte no crítica...                  
+	rk9   c4   e    	Computando parte no crítica...                  
+	rk11  c5   f    	Computando parte no crítica...                  
 	rk1   c0   a    	¡Necesito mutex!                                
 	rk1   c0   a    	Esperando respuesta de mi servidor               
 	rk0   s0        Mi cliente 1 solicita acceso exclusivo            
-	rk2   s1        Me llego un pedido de otro servidor               
+	rk8   s4        Me llego un pedido de otro servidor               
+	rk3   c1   b    	¡Necesito mutex!                                
 	rk3   c1   b    	Esperando respuesta de mi servidor               
-	rk2   s1        Yo servidor 2 no tengo pedidos locales, le permito al servidor 0 que me pidio el mutex 
+	rk4   s2        Me llego un pedido de otro servidor               
+	rk4   s2        Yo servidor 4 no tengo pedidos locales, le permito al servidor 0 que me pidio el mutex 
+
+	rk8   s4        Yo servidor 8 no tengo pedidos locales, le permito al servidor 0 que me pidio el mutex 
 
 	rk0   s0        un servidor me da permiso para que obtenga el mutex
-	rk2   s1        Mi cliente 3 solicita acceso exclusivo            
 	rk0   s0        hay un servidor menos que falta                   
-	rk0   s0        Me fijo si puedo darle el mutex...                
-	rk0   s0        Dándole permiso (me dieron todos los permisos! ) 
-	rk0   s0        le mande el mensaje a mi cliente para que obtenga el mutex 
-	rk1   c0   a    	Entrando en sección crítica                    
+	rk0   s0        Me fijo si puedo darle el mutex... al servidor 0 le faltan 4 permisos
+	rk4   s2        Mi cliente 5 solicita acceso exclusivo            
+	rk5   c2   c    	¡Necesito mutex!                                
+	rk5   c2   c    	Esperando respuesta de mi servidor               
 	rk0   s0        Me llego un pedido de otro servidor               
-	rk0   s0        difiero al servidor 2                             
+	rk0   s0        difiero al servidor 4                             
+	rk7   c3   d    	¡Necesito mutex!                                
+	rk7   c3   d    	Esperando respuesta de mi servidor               
+	rk9   c4   e    	¡Necesito mutex!                                
+	rk9   c4   e    	Esperando respuesta de mi servidor               
+	rk11  c5   f    	¡Necesito mutex!                                
+	rk11  c5   f    	Esperando respuesta de mi servidor               
+	rk10  s5        Mi cliente 11 solicita acceso exclusivo           
+	rk10  s5        Me llego un pedido de otro servidor               
+	rk10  s5        el pedido del servidor 0 tiene mas prioridad      
+	rk8   s4        Me llego un pedido de otro servidor               
+	rk8   s4        Yo servidor 8 no tengo pedidos locales, le permito al servidor 4 que me pidio el mutex 
+
+	rk10  s5        Me llego un pedido de otro servidor               
+	rk8   s4        Mi cliente 9 solicita acceso exclusivo            
+	rk8   s4        Me llego un pedido de otro servidor               
+	rk10  s5        difiero al servidor 4                             
+	rk8   s4        el pedido del servidor 10 tiene mas prioridad     
+	rk10  s5        Me llego un pedido de otro servidor               
+	rk10  s5        difiero al servidor 8                             
+	rk4   s2        Me llego un pedido de otro servidor               
+	rk10  s5        un servidor me da permiso para que obtenga el mutex
+	rk10  s5        hay un servidor menos que falta                   
+	rk10  s5        Me fijo si puedo darle el mutex... al servidor 10 le faltan 4 permisos
+	rk4   s2        el pedido del servidor 10 tiene mas prioridad     
+	rk4   s2        un servidor me da permiso para que obtenga el mutex
+	rk4   s2        hay un servidor menos que falta                   
+	rk4   s2        Me fijo si puedo darle el mutex... al servidor 4 le faltan 4 permisos
+	rk4   s2        Me llego un pedido de otro servidor               
+	rk10  s5        un servidor me da permiso para que obtenga el mutex
+	rk4   s2        difiero al servidor 8                             
+	rk10  s5        hay un servidor menos que falta                   
+	rk10  s5        Me fijo si puedo darle el mutex... al servidor 10 le faltan 3 permisos
+	rk6   s3        Me llego un pedido de otro servidor               
+	rk6   s3        Yo servidor 6 no tengo pedidos locales, le permito al servidor 4 que me pidio el mutex 
+
+	rk6   s3        Mi cliente 7 solicita acceso exclusivo            
+	rk6   s3        Me llego un pedido de otro servidor               
+	rk6   s3        difiero al servidor 8                             
+	rk6   s3        Me llego un pedido de otro servidor               
+	rk6   s3        el pedido del servidor 10 tiene mas prioridad     
+	rk6   s3        Me llego un pedido de otro servidor               
+	rk6   s3        el pedido del servidor 0 tiene mas prioridad      
+	rk4   s2        un servidor me da permiso para que obtenga el mutex
+	rk4   s2        hay un servidor menos que falta                   
+	rk4   s2        Me fijo si puedo darle el mutex... al servidor 4 le faltan 3 permisos
+	rk4   s2        Me llego un pedido de otro servidor               
+	rk4   s2        difiero al servidor 6                             
+	rk8   s4        Me llego un pedido de otro servidor               
+	rk8   s4        el pedido del servidor 6 tiene mas prioridad      
+	rk10  s5        Me llego un pedido de otro servidor               
+	rk10  s5        el pedido del servidor 6 tiene mas prioridad      
+	rk10  s5        un servidor me da permiso para que obtenga el mutex
+	rk6   s3        un servidor me da permiso para que obtenga el mutex
+	rk6   s3        hay un servidor menos que falta                   
+	rk6   s3        Me fijo si puedo darle el mutex... al servidor 6 le faltan 4 permisos
+	rk6   s3        un servidor me da permiso para que obtenga el mutex
+	rk6   s3        hay un servidor menos que falta                   
+	rk6   s3        Me fijo si puedo darle el mutex... al servidor 6 le faltan 3 permisos
+	rk10  s5        hay un servidor menos que falta                   
+	rk10  s5        Me fijo si puedo darle el mutex... al servidor 10 le faltan 2 permisos
+	rk0   s0        Me llego un pedido de otro servidor               
+	rk0   s0        difiero al servidor 6                             
+	rk0   s0        un servidor me da permiso para que obtenga el mutex
+	rk0   s0        hay un servidor menos que falta                   
+	rk0   s0        Me fijo si puedo darle el mutex... al servidor 0 le faltan 3 permisos
+	rk0   s0        Me llego un pedido de otro servidor               
+	rk0   s0        el pedido del servidor 10 tiene mas prioridad     
+	rk0   s0        un servidor me da permiso para que obtenga el mutex
+	rk0   s0        hay un servidor menos que falta                   
+	rk0   s0        Me fijo si puedo darle el mutex... al servidor 0 le faltan 2 permisos
+	rk0   s0        Me llego un pedido de otro servidor               
+	rk0   s0        difiero al servidor 8                             
+	rk0   s0        un servidor me da permiso para que obtenga el mutex
+	rk0   s0        hay un servidor menos que falta                   
+	rk0   s0        Me fijo si puedo darle el mutex... al servidor 0 le faltan 1 permisos
+	rk10  s5        un servidor me da permiso para que obtenga el mutex
+	rk10  s5        hay un servidor menos que falta                   
+	rk10  s5        Me fijo si puedo darle el mutex... al servidor 10 le faltan 1 permisos
+	rk2   s1        Mi cliente 3 solicita acceso exclusivo            
+	rk2   s1        Me llego un pedido de otro servidor               
+	rk2   s1        difiero al servidor 4                             
+	rk2   s1        Me llego un pedido de otro servidor               
+	rk2   s1        difiero al servidor 6                             
+	rk4   s2        Me llego un pedido de otro servidor               
+	rk4   s2        el pedido del servidor 2 tiene mas prioridad      
+	rk8   s4        Me llego un pedido de otro servidor               
+	rk8   s4        el pedido del servidor 2 tiene mas prioridad      
+	rk2   s1        Me llego un pedido de otro servidor               
+	rk2   s1        difiero al servidor 8                             
+	rk2   s1        un servidor me da permiso para que obtenga el mutex
+	rk2   s1        hay un servidor menos que falta                   
+	rk2   s1        Me fijo si puedo darle el mutex... al servidor 2 le faltan 4 permisos
+	rk2   s1        Me llego un pedido de otro servidor               
+	rk2   s1        el pedido del servidor 10 tiene mas prioridad     
+	rk2   s1        Me llego un pedido de otro servidor               
+	rk2   s1        el pedido del servidor 0 tiene mas prioridad      
+	rk2   s1        un servidor me da permiso para que obtenga el mutex
+	rk2   s1        hay un servidor menos que falta                   
+	rk2   s1        Me fijo si puedo darle el mutex... al servidor 2 le faltan 3 permisos
+	rk6   s3        Me llego un pedido de otro servidor               
+	rk6   s3        el pedido del servidor 2 tiene mas prioridad      
+	rk2   s1        un servidor me da permiso para que obtenga el mutex
+	rk2   s1        hay un servidor menos que falta                   
+	rk2   s1        Me fijo si puedo darle el mutex... al servidor 2 le faltan 2 permisos
+	rk0   s0        Me llego un pedido de otro servidor               
+	rk0   s0        el pedido del servidor 2 tiene mas prioridad      
+	rk0   s0        un servidor me da permiso para que obtenga el mutex
+	rk10  s5        Me llego un pedido de otro servidor               
+	rk0   s0        hay un servidor menos que falta                   
+	rk0   s0        Me fijo si puedo darle el mutex... al servidor 0 le faltan 0 permisos
+	rk0   s0        (me dieron todos los permisos!) le doy el mutex al cliente 1 
+	rk10  s5        el pedido del servidor 2 tiene mas prioridad      
+	rk10  s5        un servidor me da permiso para que obtenga el mutex
+	rk10  s5        hay un servidor menos que falta                   
+	rk10  s5        Me fijo si puedo darle el mutex... al servidor 10 le faltan 0 permisos
+	rk2   s1        un servidor me da permiso para que obtenga el mutex
+	rk2   s1        hay un servidor menos que falta                   
+	rk2   s1        Me fijo si puedo darle el mutex... al servidor 2 le faltan 1 permisos
+	rk2   s1        un servidor me da permiso para que obtenga el mutex
+	rk2   s1        hay un servidor menos que falta                   
+	rk2   s1        Me fijo si puedo darle el mutex... al servidor 2 le faltan 0 permisos
+	rk2   s1        (me dieron todos los permisos!) le doy el mutex al cliente 3 
+	rk10  s5        (me dieron todos los permisos!) le doy el mutex al cliente 11 
+	rk3   c1   b    	Entrando en sección crítica                    
+	rk11  c5   f    	Entrando en sección crítica                    
+	rk1   c0   a    	Entrando en sección crítica                    
+	rk3   c1   b    	Saliendo de sección crítica                    
+	rk3   c1   b    	Computando parte no crítica...                  
+	rk11  c5   f    	Saliendo de sección crítica                    
+	rk11  c5   f    	Computando parte no crítica...                  
+	rk10  s5        Mi cliente libera su acceso exclusivo             
+	rk10  s5        voy a permitir a los que tenia diferido           
+	rk10  s5        mandando TAG_TE_PERMITO al servidor 4             
+	rk10  s5        mandando TAG_TE_PERMITO al servidor 8             
+	rk4   s2        un servidor me da permiso para que obtenga el mutex
+	rk4   s2        hay un servidor menos que falta                   
+	rk4   s2        Me fijo si puedo darle el mutex... al servidor 4 le faltan 2 permisos
+	rk8   s4        un servidor me da permiso para que obtenga el mutex
+	rk8   s4        hay un servidor menos que falta                   
+	rk8   s4        Me fijo si puedo darle el mutex... al servidor 8 le faltan 4 permisos
+	rk2   s1        Mi cliente libera su acceso exclusivo             
+	rk2   s1        voy a permitir a los que tenia diferido           
+	rk2   s1        mandando TAG_TE_PERMITO al servidor 4             
+	rk2   s1        mandando TAG_TE_PERMITO al servidor 6             
+	rk4   s2        un servidor me da permiso para que obtenga el mutex
+	rk4   s2        hay un servidor menos que falta                   
+	rk4   s2        Me fijo si puedo darle el mutex... al servidor 4 le faltan 1 permisos
+	rk2   s1        mandando TAG_TE_PERMITO al servidor 8             
+	rk6   s3        un servidor me da permiso para que obtenga el mutex
+	rk6   s3        hay un servidor menos que falta                   
+	rk6   s3        Me fijo si puedo darle el mutex... al servidor 6 le faltan 2 permisos
+	rk8   s4        un servidor me da permiso para que obtenga el mutex
+	rk8   s4        hay un servidor menos que falta                   
+	rk8   s4        Me fijo si puedo darle el mutex... al servidor 8 le faltan 3 permisos
 	rk1   c0   a    	Saliendo de sección crítica                    
 	rk1   c0   a    	Computando parte no crítica...                  
 	rk0   s0        Mi cliente libera su acceso exclusivo             
 	rk0   s0        voy a permitir a los que tenia diferido           
-	rk0   s0        mandando TAG_TE_PERMITO al servidor 2             
-	rk2   s1        un servidor me da permiso para que obtenga el mutex
-	rk2   s1        hay un servidor menos que falta                   
-	rk2   s1        Me fijo si puedo darle el mutex...                
-	rk2   s1        Dándole permiso (me dieron todos los permisos! ) 
-	rk2   s1        le mande el mensaje a mi cliente para que obtenga el mutex 
-	rk3   c1   b    	Entrando en sección crítica                    
-	rk1   c0   a    	¡Necesito mutex!                                
-	rk1   c0   a    	Esperando respuesta de mi servidor               
-	rk0   s0        Mi cliente 1 solicita acceso exclusivo            
-	rk2   s1        Me llego un pedido de otro servidor               
-	rk2   s1        difiero al servidor 0                             
-	rk3   c1   b    	Saliendo de sección crítica                    
-	rk2   s1        Mi cliente libera su acceso exclusivo             
-	rk2   s1        voy a permitir a los que tenia diferido           
-	rk3   c1   b    	Computando parte no crítica...                  
-	rk0   s0        un servidor me da permiso para que obtenga el mutex
-	rk0   s0        hay un servidor menos que falta                   
-	rk2   s1        mandando TAG_TE_PERMITO al servidor 0             
-	rk0   s0        Me fijo si puedo darle el mutex...                
-	rk0   s0        Dándole permiso (me dieron todos los permisos! ) 
-	rk0   s0        le mande el mensaje a mi cliente para que obtenga el mutex 
-	rk1   c0   a    	Entrando en sección crítica                    
+	rk0   s0        mandando TAG_TE_PERMITO al servidor 4             
+	rk0   s0        mandando TAG_TE_PERMITO al servidor 6             
+	rk0   s0        mandando TAG_TE_PERMITO al servidor 8             
+	rk8   s4        un servidor me da permiso para que obtenga el mutex
+	rk4   s2        un servidor me da permiso para que obtenga el mutex
+	rk4   s2        hay un servidor menos que falta                   
+	rk4   s2        Me fijo si puedo darle el mutex... al servidor 4 le faltan 0 permisos
+	rk4   s2        (me dieron todos los permisos!) le doy el mutex al cliente 5 
+	rk5   c2   c    	Entrando en sección crítica                    
+	rk8   s4        hay un servidor menos que falta                   
+	rk8   s4        Me fijo si puedo darle el mutex... al servidor 8 le faltan 2 permisos
+	rk6   s3        un servidor me da permiso para que obtenga el mutex
+	rk6   s3        hay un servidor menos que falta                   
+	rk6   s3        Me fijo si puedo darle el mutex... al servidor 6 le faltan 1 permisos
 	rk3   c1   b    	¡Necesito mutex!                                
 	rk3   c1   b    	Esperando respuesta de mi servidor               
-	rk2   s1        Mi cliente 3 solicita acceso exclusivo            
+	rk11  c5   f    	¡Necesito mutex!                                
+	rk11  c5   f    	Esperando respuesta de mi servidor               
+	rk10  s5        Mi cliente 11 solicita acceso exclusivo           
 	rk0   s0        Me llego un pedido de otro servidor               
-	rk0   s0        difiero al servidor 2                             
-	rk1   c0   a    	Saliendo de sección crítica                    
-	rk0   s0        Mi cliente libera su acceso exclusivo             
-	rk0   s0        voy a permitir a los que tenia diferido           
-	rk1   c0   a    	Computando parte no crítica...                  
-	rk0   s0        mandando TAG_TE_PERMITO al servidor 2             
-	rk2   s1        un servidor me da permiso para que obtenga el mutex
-	rk2   s1        hay un servidor menos que falta                   
-	rk2   s1        Me fijo si puedo darle el mutex...                
-	rk2   s1        Dándole permiso (me dieron todos los permisos! ) 
-	rk2   s1        le mande el mensaje a mi cliente para que obtenga el mutex 
-	rk3   c1   b    	Entrando en sección crítica                    
-	rk1   c0   a    	¡Necesito mutex!                                
-	rk1   c0   a    	Esperando respuesta de mi servidor               
-	rk0   s0        Mi cliente 1 solicita acceso exclusivo            
-	rk2   s1        Me llego un pedido de otro servidor               
-	rk2   s1        difiero al servidor 0                             
-	rk3   c1   b    	Saliendo de sección crítica                    
-	rk3   c1   b    	Computando parte no crítica...                  
-	rk0   s0        un servidor me da permiso para que obtenga el mutex
-	rk0   s0        hay un servidor menos que falta                   
-	rk0   s0        Me fijo si puedo darle el mutex...                
-	rk0   s0        Dándole permiso (me dieron todos los permisos! ) 
-	rk2   s1        Mi cliente libera su acceso exclusivo             
-	rk2   s1        voy a permitir a los que tenia diferido           
-	rk2   s1        mandando TAG_TE_PERMITO al servidor 0             
-	rk0   s0        le mande el mensaje a mi cliente para que obtenga el mutex 
-	rk1   c0   a    	Entrando en sección crítica                    
-	rk3   c1   b    	¡Necesito mutex!                                
-	rk3   c1   b    	Esperando respuesta de mi servidor               
-	rk2   s1        Mi cliente 3 solicita acceso exclusivo            
-	rk0   s0        Me llego un pedido de otro servidor               
-	rk0   s0        difiero al servidor 2                             
-	rk1   c0   a    	Saliendo de sección crítica                    
-	rk1   c0   a    	Computando parte no crítica...                  
-	rk0   s0        Mi cliente libera su acceso exclusivo             
-	rk0   s0        voy a permitir a los que tenia diferido           
-	rk0   s0        mandando TAG_TE_PERMITO al servidor 2             
-	rk2   s1        un servidor me da permiso para que obtenga el mutex
-	rk2   s1        hay un servidor menos que falta                   
-	rk2   s1        Me fijo si puedo darle el mutex...                
-	rk2   s1        Dándole permiso (me dieron todos los permisos! ) 
-	rk2   s1        le mande el mensaje a mi cliente para que obtenga el mutex 
-	rk3   c1   b    	Entrando en sección crítica                    
-	rk1   c0   a    	¡Necesito mutex!                                
-	rk1   c0   a    	Esperando respuesta de mi servidor               
-	rk0   s0        Mi cliente 1 solicita acceso exclusivo            
-	rk2   s1        Me llego un pedido de otro servidor               
-	rk2   s1        difiero al servidor 0                             
-	rk3   c1   b    	Saliendo de sección crítica                    
-	rk3   c1   b    	Computando parte no crítica...                  
-	rk2   s1        Mi cliente libera su acceso exclusivo             
-	rk2   s1        voy a permitir a los que tenia diferido           
-	rk2   s1        mandando TAG_TE_PERMITO al servidor 0             
-	rk0   s0        un servidor me da permiso para que obtenga el mutex
-	rk0   s0        hay un servidor menos que falta                   
-	rk0   s0        Me fijo si puedo darle el mutex...                
-	rk0   s0        Dándole permiso (me dieron todos los permisos! ) 
-	rk0   s0        le mande el mensaje a mi cliente para que obtenga el mutex 
-	rk1   c0   a    	Entrando en sección crítica                    
-	rk3   c1   b    	¡Necesito mutex!                                
-	rk3   c1   b    	Esperando respuesta de mi servidor               
-	rk2   s1        Mi cliente 3 solicita acceso exclusivo            
-	rk0   s0        Me llego un pedido de otro servidor               
-	rk0   s0        difiero al servidor 2                             
-	rk1   c0   a    	Saliendo de sección crítica                    
-	rk0   s0        Mi cliente libera su acceso exclusivo             
-	rk0   s0        voy a permitir a los que tenia diferido           
-	rk1   c0   a    	Computando parte no crítica...                  
-	rk0   s0        mandando TAG_TE_PERMITO al servidor 2             
-	rk2   s1        un servidor me da permiso para que obtenga el mutex
-	rk2   s1        hay un servidor menos que falta                   
-	rk2   s1        Me fijo si puedo darle el mutex...                
-	rk2   s1        Dándole permiso (me dieron todos los permisos! ) 
-	rk2   s1        le mande el mensaje a mi cliente para que obtenga el mutex 
-	rk3   c1   b    	Entrando en sección crítica                    
+	rk0   s0        Yo servidor 0 no tengo pedidos locales, le permito al servidor 10 que me pidio el mutex 
+
+	rk8   s4        Me llego un pedido de otro servidor               
+	rk8   s4        difiero al servidor 10                            
+	rk4   s2        Me llego un pedido de otro servidor               
+	rk6   s3        Me llego un pedido de otro servidor               
+	rk6   s3        difiero al servidor 10                            
+	rk10  s5        un servidor me da permiso para que obtenga el mutex
+	rk10  s5        hay un servidor menos que falta                   
+	rk10  s5        Me fijo si puedo darle el mutex... al servidor 10 le faltan 4 permisos
+	rk4   s2        difiero al servidor 10                            
 	rk0   s0        Mi cliente 1 solicita acceso exclusivo            
 	rk1   c0   a    	¡Necesito mutex!                                
 	rk1   c0   a    	Esperando respuesta de mi servidor               
+	rk8   s4        Me llego un pedido de otro servidor               
+	rk8   s4        difiero al servidor 0                             
+	rk4   s2        Me llego un pedido de otro servidor               
+	rk4   s2        difiero al servidor 0                             
+	rk6   s3        Me llego un pedido de otro servidor               
+	rk6   s3        difiero al servidor 0                             
+	rk10  s5        Me llego un pedido de otro servidor               
+	rk10  s5        difiero al servidor 0                             
 	rk2   s1        Me llego un pedido de otro servidor               
-	rk2   s1        difiero al servidor 0                             
-	rk2   s1        Mi cliente libera su acceso exclusivo             
-	rk2   s1        voy a permitir a los que tenia diferido           
-	rk2   s1        mandando TAG_TE_PERMITO al servidor 0             
-	rk3   c1   b    	Saliendo de sección crítica                    
-	rk3   c1   b    	Computando parte no crítica...                  
+	rk2   s1        Yo servidor 2 no tengo pedidos locales, le permito al servidor 10 que me pidio el mutex 
+
+	rk2   s1        Me llego un pedido de otro servidor               
+	rk2   s1        Yo servidor 2 no tengo pedidos locales, le permito al servidor 0 que me pidio el mutex 
+
+	rk2   s1        Mi cliente 3 solicita acceso exclusivo            
 	rk0   s0        un servidor me da permiso para que obtenga el mutex
 	rk0   s0        hay un servidor menos que falta                   
-	rk0   s0        Me fijo si puedo darle el mutex...                
-	rk0   s0        Dándole permiso (me dieron todos los permisos! ) 
-	rk0   s0        le mande el mensaje a mi cliente para que obtenga el mutex 
-	rk1   c0   a    	Entrando en sección crítica                    
-	rk3   c1   b    	¡Necesito mutex!                                
-	rk3   c1   b    	Esperando respuesta de mi servidor               
-	rk2   s1        Mi cliente 3 solicita acceso exclusivo            
+	rk0   s0        Me fijo si puedo darle el mutex... al servidor 0 le faltan 4 permisos
 	rk0   s0        Me llego un pedido de otro servidor               
+	rk8   s4        Me llego un pedido de otro servidor               
+	rk8   s4        difiero al servidor 2                             
 	rk0   s0        difiero al servidor 2                             
-	rk1   c0   a    	Saliendo de sección crítica                    
-	rk1   c0   a    	Computando cuestiones finales...                 
-	rk0   s0        Mi cliente libera su acceso exclusivo             
-	rk0   s0        voy a permitir a los que tenia diferido           
-	rk0   s0        mandando TAG_TE_PERMITO al servidor 2             
+	rk6   s3        Me llego un pedido de otro servidor               
+	rk6   s3        difiero al servidor 2                             
+	rk4   s2        Me llego un pedido de otro servidor               
+	rk4   s2        difiero al servidor 2                             
+	rk5   c2   c    	Saliendo de sección crítica                    
+	rk5   c2   c    	Computando parte no crítica...                  
+	rk4   s2        Mi cliente libera su acceso exclusivo             
+	rk4   s2        voy a permitir a los que tenia diferido           
+	rk4   s2        mandando TAG_TE_PERMITO al servidor 0             
+	rk4   s2        mandando TAG_TE_PERMITO al servidor 2             
 	rk2   s1        un servidor me da permiso para que obtenga el mutex
 	rk2   s1        hay un servidor menos que falta                   
-	rk2   s1        Me fijo si puedo darle el mutex...                
-	rk2   s1        Dándole permiso (me dieron todos los permisos! ) 
-	rk2   s1        le mande el mensaje a mi cliente para que obtenga el mutex 
-	rk3   c1   b    	Entrando en sección crítica                    
-	rk3   c1   b    	Saliendo de sección crítica                    
-	rk3   c1   b    	Computando cuestiones finales...                 
-	rk2   s1        Mi cliente libera su acceso exclusivo             
-	rk2   s1        voy a permitir a los que tenia diferido           
-	rk1   c0   a    	Avisandole a mi servidor que voy a terminar      
-	rk1   c0   a    Finalizando                                       
-	rk0   s0        Mi cliente avisa que terminó                     
-	rk0   s0        Finalizando                                       
-	rk2   s1        Mi cliente avisa que terminó                     
-	rk2   s1        Finalizando                                       
-	rk3   c1   b    	Avisandole a mi servidor que voy a terminar      
-	rk3   c1   b    Finalizando                                       
+	rk2   s1        Me fijo si puedo darle el mutex... al servidor 2 le faltan 4 permisos
+	rk4   s2        mandando TAG_TE_PERMITO al servidor 6             
+	rk4   s2        mandando TAG_TE_PERMITO al servidor 8             
+	rk4   s2        mandando TAG_TE_PERMITO al servidor 10            
+	rk6   s3        un servidor me da permiso para que obtenga el mutex
+	rk6   s3        hay un servidor menos que falta                   
+	rk6   s3        Me fijo si puedo darle el mutex... al servidor 6 le faltan 0 permisos
+	rk6   s3        (me dieron todos los permisos!) le doy el mutex al cliente 7 
+	rk8   s4        un servidor me da permiso para que obtenga el mutex
+	rk8   s4        hay un servidor menos que falta                   
+	rk8   s4        Me fijo si puedo darle el mutex... al servidor 8 le faltan 1 permisos
+	rk7   c3   d    	Entrando en sección crítica                    
+	rk0   s0        un servidor me da permiso para que obtenga el mutex
+	rk0   s0        hay un servidor menos que falta                   
+	rk0   s0        Me fijo si puedo darle el mutex... al servidor 0 le faltan 3 permisos
+	rk10  s5        un servidor me da permiso para que obtenga el mutex
+	rk10  s5        hay un servidor menos que falta                   
+	rk10  s5        Me fijo si puedo darle el mutex... al servidor 10 le faltan 3 permisos
+	rk10  s5        Me llego un pedido de otro servidor               
+	rk10  s5        difiero al servidor 2                             
+	rk10  s5        un servidor me da permiso para que obtenga el mutex
+	rk10  s5        hay un servidor menos que falta                   
+	rk10  s5        Me fijo si puedo darle el mutex... al servidor 10 le faltan 2 permisos
+	rk5   c2   c    	¡Necesito mutex!                                
+	rk5   c2   c    	Esperando respuesta de mi servidor               
+	rk4   s2        Mi cliente 5 solicita acceso exclusivo            
+	rk2   s1        Me llego un pedido de otro servidor               
+	rk2   s1        difiero al servidor 4                             
+	rk8   s4        Me llego un pedido de otro servidor               
+	rk0   s0        Me llego un pedido de otro servidor               
+	rk0   s0        difiero al servidor 4                             
+	rk8   s4        difiero al servidor 4                             
+	rk6   s3        Me llego un pedido de otro servidor               
+	rk6   s3        difiero al servidor 4                             
+	rk10  s5        Me llego un pedido de otro servidor               
+	rk10  s5        difiero al servidor 4                             
+	rk7   c3   d    	Saliendo de sección crítica                    
+	rk7   c3   d    	Computando parte no crítica...                  
+	rk6   s3        Mi cliente libera su acceso exclusivo             
+	rk6   s3        voy a permitir a los que tenia diferido           
+	rk6   s3        mandando TAG_TE_PERMITO al servidor 0             
+	rk0   s0        un servidor me da permiso para que obtenga el mutex
+	rk0   s0        hay un servidor menos que falta                   
+	rk0   s0        Me fijo si puedo darle el mutex... al servidor 0 le faltan 2 permisos
+	rk6   s3        mandando TAG_TE_PERMITO al servidor 2             
+	rk6   s3        mandando TAG_TE_PERMITO al servidor 4             
+	rk2   s1        un servidor me da permiso para que obtenga el mutex
+	rk4   s2        un servidor me da permiso para que obtenga el mutex
+	rk4   s2        hay un servidor menos que falta                   
+	rk4   s2        Me fijo si puedo darle el mutex... al servidor 4 le faltan 4 permisos
+	rk6   s3        mandando TAG_TE_PERMITO al servidor 8             
+	rk2   s1        hay un servidor menos que falta                   
+	rk2   s1        Me fijo si puedo darle el mutex... al servidor 2 le faltan 3 permisos
+	rk6   s3        mandando TAG_TE_PERMITO al servidor 10            
+	rk8   s4        un servidor me da permiso para que obtenga el mutex
+	rk8   s4        hay un servidor menos que falta                   
+	rk8   s4        Me fijo si puedo darle el mutex... al servidor 8 le faltan 0 permisos
+	rk8   s4        (me dieron todos los permisos!) le doy el mutex al cliente 9 
+	rk9   c4   e    	Entrando en sección crítica                    
+	rk10  s5        un servidor me da permiso para que obtenga el mutex
+	rk10  s5        hay un servidor menos que falta                   
+	rk10  s5        Me fijo si puedo darle el mutex... al servidor 10 le faltan 1 permisos
+	rk7   c3   d    	¡Necesito mutex!                                
+	rk7   c3   d    	Esperando respuesta de mi servidor               
+	rk6   s3        Mi cliente 7 solicita acceso exclusivo            
+	rk4   s2        Me llego un pedido de otro servidor               
+	rk4   s2        difiero al servidor 6                             
+	rk10  s5        Me llego un pedido de otro servidor               
+	rk10  s5        difiero al servidor 6                             
+	rk0   s0        Me llego un pedido de otro servidor               
+	rk0   s0        difiero al servidor 6                             
+	rk2   s1        Me llego un pedido de otro servidor               
+	rk2   s1        difiero al servidor 6                             
+	rk8   s4        Me llego un pedido de otro servidor               
+	rk8   s4        difiero al servidor 6                             
+	rk9   c4   e    	Saliendo de sección crítica                    
+	rk9   c4   e    	Computando parte no crítica...                  
+	rk8   s4        Mi cliente libera su acceso exclusivo             
+	rk8   s4        voy a permitir a los que tenia diferido           
+	rk8   s4        mandando TAG_TE_PERMITO al servidor 0             
+	rk8   s4        mandando TAG_TE_PERMITO al servidor 2             
+	rk0   s0        un servidor me da permiso para que obtenga el mutex
+	rk0   s0        hay un servidor menos que falta                   
+	rk0   s0        Me fijo si puedo darle el mutex... al servidor 0 le faltan 1 permisos
+	rk2   s1        un servidor me da permiso para que obtenga el mutex
+	rk2   s1        hay un servidor menos que falta                   
+	rk2   s1        Me fijo si puedo darle el mutex... al servidor 2 le faltan 2 permisos
+	rk8   s4        mandando TAG_TE_PERMITO al servidor 4             
+	rk4   s2        un servidor me da permiso para que obtenga el mutex
+	rk4   s2        hay un servidor menos que falta                   
+	rk4   s2        Me fijo si puedo darle el mutex... al servidor 4 le faltan 3 permisos
+	rk8   s4        mandando TAG_TE_PERMITO al servidor 6             
+	rk8   s4        mandando TAG_TE_PERMITO al servidor 10            
+	rk6   s3        un servidor me da permiso para que obtenga el mutex
+	rk10  s5        un servidor me da permiso para que obtenga el mutex
+	rk10  s5        hay un servidor menos que falta                   
+	rk10  s5        Me fijo si puedo darle el mutex... al servidor 10 le faltan 0 permisos
+	rk10  s5        (me dieron todos los permisos!) le doy el mutex al cliente 11 
+	rk6   s3        hay un servidor menos que falta                   
+	rk6   s3        Me fijo si puedo darle el mutex... al servidor 6 le faltan 4 permisos
+	rk11  c5   f    	Entrando en sección crítica                    
+Ctrl-C caught... cleaning up processes
