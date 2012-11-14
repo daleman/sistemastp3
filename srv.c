@@ -16,7 +16,8 @@ void servidor(int mi_cliente)
  
     int request_diferido[cant_servidores];	// un "booleano" para decir que servidores estan diferidos, es decir
 						// que pidieron el mutex para sus clientes y todavia no lo obtuvieron
-	buffer[120];
+	char buffer[120];
+	int max;
     int i = 0;
     while(i < cant_servidores){
 	request_diferido[i] = FALSE;
@@ -24,8 +25,7 @@ void servidor(int mi_cliente)
 	}
 
 	int el_mayor = 0;		// el mayor numero de secuencia enviado o recibido por mi servidor
-	int mi_numero = 0;			// el numero de secuencia de mi servidor
-	int buf_numero = 0;			//el buffer que se pasa por mensaje
+	
 	int faltantes = 1;		// la cantidad de replies que faltan de todos los servidores para obtener el mutex, lo inicializo con un numero 							//positivo asi no me da el mutex de inmediato sin pensarlo 
 
 	int buf_entrante;
@@ -38,17 +38,15 @@ void servidor(int mi_cliente)
         
         if (tag == TAG_PEDIDO) {
             assert(origen == mi_cliente);
-	    sprintf("Mi cliente %d solicita acceso exclusivo", mi_cliente);
-            debug(buffer);
+	   // sprintf("Mi cliente %d solicita acceso exclusivo", mi_cliente);
+            debug("Mi cliente solicita acceso exclusivo");
             assert( hay_pedido_local == FALSE);
             hay_pedido_local = TRUE;						// yo quiero el mutex
             el_mayor++;		//incremento el mayor
-	    //mi_numero = el_mayor;				// actualizo mi_numero
-	    //buf_numero = mi_numero;
-	    faltantes = cant_servidores - 1;	//faltan todos los servidores menos yo, empiecen a mandar mensajitos...
-		if (faltantes == 0) {
-		debug("solo hay un servidor");
-		MPI_Send(NULL, 0, MPI_INT, mi_cliente, TAG_OTORGADO, COMM_WORLD);
+			faltantes = cant_servidores - 1;	//faltan todos los servidores menos yo, empiecen a mandar mensajitos...
+			if (faltantes == 0) {
+			debug("solo hay un servidor");
+			MPI_Send(NULL, 0, MPI_INT, mi_cliente, TAG_OTORGADO, COMM_WORLD);
 		
 		} 	    
 		int serv = 0;
@@ -82,17 +80,13 @@ void servidor(int mi_cliente)
 
 	    else if (tag == TAG_PEDIR) {
             	assert(origen != mi_rank);
-		int max = el_mayor;		
-		if (buf_entrante  > el_mayor){		//elijo el maximo entre el_mayor y el numero que recibi
-			max = buf_entrante ;		
-		}
-		el_mayor = max;
-            	debug("Me llego un pedido de otro servidor ");
+		
+		       	debug("Me llego un pedido de otro servidor ");
            		if(!hay_pedido_local){
 				assert(hay_pedido_local == FALSE);
 				debug("no tengo pedidos locales, le permito al servidor que me pidio el mutex");		        				MPI_Send(NULL, 0, MPI_INT, origen, TAG_TE_PERMITO, COMM_WORLD);
 				}
-			else if( max > mi_numero || ( el_mayor == mi_numero && origen > (mi_cliente-1)) ){
+			else if( el_mayor < buf_entrante || ( el_mayor == buf_entrante && mi_rank < origen ) ){
 				int serv = origen / 2;					
 				debug("lo difiero");					
 				request_diferido[serv] = TRUE;
@@ -100,8 +94,13 @@ void servidor(int mi_cliente)
 			}else{
 			debug("lo permito");
 			MPI_Send(NULL, 0, MPI_INT, origen, TAG_TE_PERMITO, COMM_WORLD);
-			//el_mayor = max;
+			max = el_mayor;		
 			}
+
+			if (buf_entrante  > el_mayor){		//elijo el maximo entre el_mayor y el numero que recibi
+					max = buf_entrante ;		
+				}			
+			el_mayor = max;
 			
         }
 

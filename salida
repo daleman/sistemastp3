@@ -1,0 +1,52 @@
+	rk0   s0        Enviando mensaje inicial con parámetros          
+	rk0   s0        Enviando mensaje inicial con parámetros          
+	rk1   c0   a    	¡Buenas! Recibí mensaje inicial con parámetros
+	rk1   c0   a    	       0ms ini        0ms fin     2 iters        0ms prev        0ms crit
+	rk1   c0   a    	Computando cuestiones iniciales...               
+	rk3   c1   b    	¡Buenas! Recibí mensaje inicial con parámetros
+	rk3   c1   b    	       0ms ini        0ms fin     2 iters        0ms prev        0ms crit
+	rk3   c1   b    	Computando cuestiones iniciales...               
+	rk1   c0   a    	Computando parte no crítica...                  
+	rk3   c1   b    	Computando parte no crítica...                  
+	rk0   s0        Mi cliente solicita acceso exclusivo              
+	rk0   s0        un servidor me da permiso para que obtenga el mutex
+	rk0   s0        hay un servidor menos que falta                   
+	rk0   s0        Me fijo si puedo darle el mutex...                
+	rk1   c0   a    	¡Necesito mutex!                                
+	rk1   c0   a    	Esperando respuesta de mi servidor               
+	rk2   s1        Me llego un pedido de otro servidor               
+	rk2   s1        no tengo pedidos locales, le permito al servidor que me pidio el mutex
+	rk0   s0        Dándole permiso (me dieron todos los permisos! ) 
+	rk0   s0        le mande el mensaje a mi cliente para que obtenga el mutex 
+	rk0   s0        Me llego un pedido de otro servidor               
+	rk0   s0        lo difiero                                        
+	rk2   s1        Mi cliente solicita acceso exclusivo              
+	rk3   c1   b    	¡Necesito mutex!                                
+	rk3   c1   b    	Esperando respuesta de mi servidor               
+	rk1   c0   a    	Entrando en sección crítica                    
+	rk1   c0   a    	Saliendo de sección crítica                    
+	rk1   c0   a    	Computando parte no crítica...                  
+	rk0   s0        Mi cliente libera su acceso exclusivo             
+	rk0   s0        voy a permitir a los que tenia diferido           
+	rk0   s0        mandando TAG_TE_PERMITO                           
+	rk2   s1        un servidor me da permiso para que obtenga el mutex
+	rk2   s1        hay un servidor menos que falta                   
+	rk2   s1        Me fijo si puedo darle el mutex...                
+	rk2   s1        Dándole permiso (me dieron todos los permisos! ) 
+	rk2   s1        le mande el mensaje a mi cliente para que obtenga el mutex 
+	rk3   c1   b    	Entrando en sección crítica                    
+	rk1   c0   a    	¡Necesito mutex!                                
+	rk1   c0   a    	Esperando respuesta de mi servidor               
+	rk0   s0        Mi cliente solicita acceso exclusivo              
+	rk2   s1        Me llego un pedido de otro servidor               
+	rk2   s1        lo difiero                                        
+	rk3   c1   b    	Saliendo de sección crítica                    
+	rk3   c1   b    	Computando parte no crítica...                  
+	rk2   s1        Mi cliente libera su acceso exclusivo             
+	rk2   s1        voy a permitir a los que tenia diferido           
+	rk3   c1   b    	¡Necesito mutex!                                
+	rk2   s1        Mi cliente solicita acceso exclusivo              
+	rk3   c1   b    	Esperando respuesta de mi servidor               
+	rk0   s0        Me llego un pedido de otro servidor               
+	rk0   s0        lo difiero                                        
+Ctrl-C caught... cleaning up processes
