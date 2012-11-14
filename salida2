@@ -1,0 +1,93 @@
+damian@ubuntu:~/sistemastp3$ mpiexec -np 6 ./tp3 a 500 500 1 500 500
+	rk0   s0        Enviando mensaje inicial con parámetros          
+	rk1   c0   a    	¡Buenas! Recibí mensaje inicial con parámetros
+	rk1   c0   a    	     500ms ini      500ms fin     1 iters      500ms prev      500ms crit
+	rk1   c0   a    	Computando cuestiones iniciales...               
+	rk0   s0        Enviando mensaje inicial con parámetros          
+	rk0   s0        Enviando mensaje inicial con parámetros          
+	rk3   c1   b    	¡Buenas! Recibí mensaje inicial con parámetros
+	rk3   c1   b    	     500ms ini      500ms fin     1 iters      500ms prev      500ms crit
+	rk3   c1   b    	Computando cuestiones iniciales...               
+	rk5   c2   c    	¡Buenas! Recibí mensaje inicial con parámetros
+	rk5   c2   c    	     500ms ini      500ms fin     1 iters      500ms prev      500ms crit
+	rk5   c2   c    	Computando cuestiones iniciales...               
+	rk1   c0   a    	Computando parte no crítica...                  
+	rk3   c1   b    	Computando parte no crítica...                  
+	rk5   c2   c    	Computando parte no crítica...                  
+	rk0   s0        Mi cliente 0 solicita acceso exclusivo            
+	rk0   s0        Yo servidor 0 mando un pedido al servidor 0. HpedLoc: 1, elMay: 1
+	rk0   s0        Yo servidor 0 mando un pedido al servidor 0. HpedLoc: 1, elMay: 1
+	rk1   c0   a    	¡Necesito mutex!                                
+	rk1   c0   a    	Esperando respuesta de mi servidor               
+	rk0   s0        el servidor 1 me da permiso para que obtenga el mutex
+	rk0   s0        Me fijo si puedo darle el mutex... al servidor 0 le faltan 1 permisos
+	rk0   s0        el servidor 2 me da permiso para que obtenga el mutex
+	rk2   s1        Me llego un pedido del servidor 0. HpedLoc: 0, elMay: 0, bufE: 1
+	rk2   s1        Yo servidor 1 no tengo pedidos locales, le permito al servidor 0 que me pidio el mutex 
+
+	rk4   s2        Me llego un pedido del servidor 0. HpedLoc: 0, elMay: 0, bufE: 1
+	rk4   s2        Yo servidor 2 no tengo pedidos locales, le permito al servidor 0 que me pidio el mutex 
+
+	rk0   s0        Me fijo si puedo darle el mutex... al servidor 0 le faltan 0 permisos
+	rk0   s0        (me dieron todos los permisos!) le doy el mutex al cliente 0 
+	rk2   s1        Me llego un pedido del servidor 2. HpedLoc: 0, elMay: 1, bufE: 2
+	rk2   s1        Yo servidor 1 no tengo pedidos locales, le permito al servidor 2 que me pidio el mutex 
+
+	rk4   s2        Mi cliente 2 solicita acceso exclusivo            
+	rk4   s2        Yo servidor 2 mando un pedido al servidor 2. HpedLoc: 1, elMay: 2
+	rk4   s2        Yo servidor 2 mando un pedido al servidor 2. HpedLoc: 1, elMay: 2
+	rk4   s2        el servidor 1 me da permiso para que obtenga el mutex
+	rk4   s2        Me fijo si puedo darle el mutex... al servidor 2 le faltan 1 permisos
+	rk5   c2   c    	¡Necesito mutex!                                
+	rk5   c2   c    	Esperando respuesta de mi servidor               
+	rk2   s1        Mi cliente 1 solicita acceso exclusivo            
+	rk2   s1        Yo servidor 1 mando un pedido al servidor 1. HpedLoc: 1, elMay: 3
+	rk2   s1        Yo servidor 1 mando un pedido al servidor 1. HpedLoc: 1, elMay: 3
+	rk3   c1   b    	¡Necesito mutex!                                
+	rk3   c1   b    	Esperando respuesta de mi servidor               
+	rk4   s2        Me llego un pedido del servidor 1. HpedLoc: 1, elMay: 2, bufE: 3
+	rk4   s2        difiero al servidor 1                             
+	rk1   c0   a    	Entrando en sección crítica                    
+a	rk0   s0        Me llego un pedido del servidor 1. HpedLoc: 1, elMay: 1, bufE: 3
+	rk0   s0        difiero al servidor 1                             
+	rk0   s0        Me llego un pedido del servidor 2. HpedLoc: 1, elMay: 3, bufE: 2
+	rk0   s0        el pedido del servidor 2 tiene mas prioridad      
+	rk4   s2        el servidor 0 me da permiso para que obtenga el mutex
+	rk4   s2        Me fijo si puedo darle el mutex... al servidor 2 le faltan 0 permisos
+	rk4   s2        (me dieron todos los permisos!) le doy el mutex al cliente 2 
+	rk5   c2   c    	Entrando en sección crítica                    
+cacacaccacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacac
+a
+	rk5   c2   c    	Saliendo de sección crítica                    
+	rk5   c2   c    	Computando cuestiones finales...                 
+	rk4   s2        Mi cliente libera su acceso exclusivo             
+	rk4   s2        voy a permitir a los que tenia diferido           
+	rk4   s2        mandando TAG_TE_PERMITO al servidor 1             
+	rk2   s1        el servidor 2 me da permiso para que obtenga el mutex
+	rk2   s1        Me fijo si puedo darle el mutex... al servidor 1 le faltan 1 permisos
+	rk1   c0   a    	Saliendo de sección crítica                    
+	rk1   c0   a    	Computando cuestiones finales...                 
+	rk0   s0        Mi cliente libera su acceso exclusivo             
+	rk0   s0        voy a permitir a los que tenia diferido           
+	rk0   s0        mandando TAG_TE_PERMITO al servidor 1             
+	rk2   s1        el servidor 0 me da permiso para que obtenga el mutex
+	rk2   s1        Me fijo si puedo darle el mutex... al servidor 1 le faltan 0 permisos
+	rk2   s1        (me dieron todos los permisos!) le doy el mutex al cliente 1 
+	rk3   c1   b    	Entrando en sección crítica                    
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb	rk5   c2   c    	Avisandole a mi servidor que voy a terminar      
+	rk4   s2        Mi cliente avisa que terminó                     
+	rk4   s2        Finalizando                                       
+	rk5   c2   c    Finalizando                                       
+b	rk0   s0        Mi cliente avisa que terminó                     
+	rk0   s0        Finalizando                                       
+	rk1   c0   a    	Avisandole a mi servidor que voy a terminar      
+	rk1   c0   a    Finalizando                                       
+bb
+	rk3   c1   b    	Saliendo de sección crítica                    
+	rk3   c1   b    	Computando cuestiones finales...                 
+	rk2   s1        Mi cliente libera su acceso exclusivo             
+	rk2   s1        voy a permitir a los que tenia diferido           
+	rk2   s1        Mi cliente avisa que terminó                     
+	rk2   s1        Finalizando                                       
+	rk3   c1   b    	Avisandole a mi servidor que voy a terminar      
+	rk3   c1   b    Finalizando 
