@@ -24,6 +24,7 @@
 
 #define TAG_PEDIR             60    /* srv -> srv */
 #define TAG_TE_PERMITO        70    /* srv -> srv */
+#define TAG_ME_VOY            80    /* srv -> srv */
 
 
 /* Abrevs. de constantes MPI que usaremos seguido */

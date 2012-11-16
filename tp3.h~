@@ -24,6 +24,7 @@
 
 #define TAG_PEDIR             60    /* srv -> srv */
 #define TAG_TE_PERMITO        70    /* srv -> srv */
+#define TAG_TERMINE           80    /* srv -> srv */
 
 
 /* Abrevs. de constantes MPI que usaremos seguido */
@@ -62,9 +63,7 @@ extern int cant_ranks, mi_rank, mi_nro, mi_rol, mi_char, cant_servidores;
 
 extern int* request_diferido;
 
-extern int faltantes;
-extern int mi_numero[];
-extern int buf_numero[];
+extern int faltantes, mi_numero, buf_entrante, buf_numero;
 
 
 extern void debug(const char* mensaje);
