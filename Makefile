@@ -1,5 +1,5 @@
-MPICC   = mpicc
-MPIEXEC = mpiexec
+MPICC   = mpicc.openmpi
+MPIEXEC = mpiexec.openmpi
 CFLAGS += -Wall
 
 EJECUTABLE = tp3
